@@ -1,0 +1,29 @@
+﻿class mediaVoti
+{
+    static void Main(string[] args)
+    {
+        double[] listaVoti = [5.2, 3, 7, 2, 9.8, 4.5, 10, 4, 8, 5.5];
+        foreach (double voto in listaVoti)
+        {
+            switch (voto)
+            {
+                case < 6.0:
+                    {
+                        Console.WriteLine("Insufficente");
+                        break;
+                    }
+
+                case >= 6.0:
+                    {
+                        Console.WriteLine("sufficente");
+                        break;
+                    }
+                default:
+                    {
+                        Console.WriteLine("frocione");
+                        break;
+                    }
+            }
+        }
+    }
+}

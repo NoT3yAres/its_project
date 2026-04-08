@@ -1,0 +1,5 @@
+SELECT AVG(VotoRecensione) AS Media_piu_alta
+FROM Corso, Recensione
+WHERE (Corso.ID_Corso = Recensione.ID_Corso)
+ORDER BY VotoRecensione DESC
+LIMIT 1;

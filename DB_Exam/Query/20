@@ -1,0 +1,6 @@
+SELECT TipoCorso.Nome, COUNT(Corso.NomeCorso) AS N_Corsi
+FROM Corso, TipoCorso
+WHERE (Corso.ID_TipoCorso = TipoCorso.ID_TipoCorso)
+GROUP BY (TipoCorso.Nome)
+HAVING (N_Corsi > 2)
+ORDER BY (N_Corsi) DESC;

@@ -1,0 +1,14 @@
+C:\Users\Utente\Desktop\robamia\120126\ConsoleAppRead\bin\Debug\net10.0\ConsoleAppRead.exe
+C:\Users\Utente\Desktop\robamia\120126\ConsoleAppRead\bin\Debug\net10.0\ConsoleAppRead.deps.json
+C:\Users\Utente\Desktop\robamia\120126\ConsoleAppRead\bin\Debug\net10.0\ConsoleAppRead.runtimeconfig.json
+C:\Users\Utente\Desktop\robamia\120126\ConsoleAppRead\bin\Debug\net10.0\ConsoleAppRead.dll
+C:\Users\Utente\Desktop\robamia\120126\ConsoleAppRead\bin\Debug\net10.0\ConsoleAppRead.pdb
+C:\Users\Utente\Desktop\robamia\120126\ConsoleAppRead\obj\Debug\net10.0\ConsoleAppRead.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Utente\Desktop\robamia\120126\ConsoleAppRead\obj\Debug\net10.0\ConsoleAppRead.AssemblyInfoInputs.cache
+C:\Users\Utente\Desktop\robamia\120126\ConsoleAppRead\obj\Debug\net10.0\ConsoleAppRead.AssemblyInfo.cs
+C:\Users\Utente\Desktop\robamia\120126\ConsoleAppRead\obj\Debug\net10.0\ConsoleAppRead.csproj.CoreCompileInputs.cache
+C:\Users\Utente\Desktop\robamia\120126\ConsoleAppRead\obj\Debug\net10.0\ConsoleAppRead.dll
+C:\Users\Utente\Desktop\robamia\120126\ConsoleAppRead\obj\Debug\net10.0\refint\ConsoleAppRead.dll
+C:\Users\Utente\Desktop\robamia\120126\ConsoleAppRead\obj\Debug\net10.0\ConsoleAppRead.pdb
+C:\Users\Utente\Desktop\robamia\120126\ConsoleAppRead\obj\Debug\net10.0\ConsoleAppRead.genruntimeconfig.cache
+C:\Users\Utente\Desktop\robamia\120126\ConsoleAppRead\obj\Debug\net10.0\ref\ConsoleAppRead.dll

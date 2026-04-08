@@ -1,0 +1,2 @@
+INSERT INTO Amministratore
+VALUES ('1');

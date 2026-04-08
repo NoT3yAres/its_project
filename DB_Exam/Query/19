@@ -1,0 +1,7 @@
+SELECT Insegnante.ID_Insegnante, Insegnante.Nome,AVG(VotoRecensione)
+FROM Recensione, Corso, Insegnante
+WHERE   (Recensione.ID_Corso = Corso.ID_Corso) AND
+        (Insegnante.ID_Insegnante = Corso.ID_Insegnante) AND
+        (VotoRecensione > 6)
+GROUP BY (Insegnante.ID_Insegnante);
+ORDER BY VotoRecensione DESC

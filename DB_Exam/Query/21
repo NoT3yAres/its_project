@@ -1,0 +1,8 @@
+    SELECT Utente.Nome, Utente.Cognome, SUM(Importo) AS Importo_Totale
+    FROM Utente, Acquisto, Corso, Carrello
+    WHERE   (Utente.ID_Utente = Carrello.ID_Utente) AND
+            (ACquisto.ID_Acquisto = Carrello.ID_Acquisto) AND
+            (Corso.ID_Corso = Acquisto.ID_Corso)
+    GROUP BY (Utente.ID_Utente)
+    HAVING (COUNT(Acquisto.ID_Acquisto > 3))
+    ORDER BY (SUM(Importo)) DESC;

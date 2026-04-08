@@ -1,0 +1,4 @@
+    SELECT COUNT(NomeCorso) as Quanti_corsi_informatica
+    FROM Corso, TipoCorso
+    WHERE Corso.ID_TipoCorso = TipoCorso.ID_TipoCorso AND
+          TipoCorso.Nome = 'Informatica'; 

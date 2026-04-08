@@ -1,0 +1,9 @@
+CREATE TABLE Dipartimenti ( DipartimentoID INT PRIMARY KEY, Nome NVARCHAR(100) );
+ -- Creazione della tabella Docenti 
+CREATE TABLE Docenti ( DocenteID INT PRIMARY KEY, Nome NVARCHAR(50), Cognome NVARCHAR(50), DipartimentoID INT, FOREIGN KEY (DipartimentoID) REFERENCES Dipartimenti(DipartimentoID) ); 
+-- Creazione della tabella Corsi 
+CREATE TABLE Corsi ( CorsoID INT PRIMARY KEY, NomeCorso NVARCHAR(100), Descrizione NVARCHAR(255), DocenteID INT, FOREIGN KEY (DocenteID) REFERENCES Docenti(DocenteID) ); 
+-- Creazione della tabella Studenti 
+CREATE TABLE Studenti ( StudenteID INT PRIMARY KEY, Nome NVARCHAR(50), Cognome NVARCHAR(50), DataDiNascita DATE ); 
+-- Creazione della tabella Iscrizioni 
+CREATE TABLE Iscrizioni ( IscrizioneID INT PRIMARY KEY, StudenteID INT, CorsoID INT, DataIscrizione DATE, FOREIGN KEY (StudenteID) REFERENCES Studenti(StudenteID), FOREIGN KEY (CorsoID) REFERENCES Corsi(CorsoID) );

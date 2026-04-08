@@ -1,0 +1,88 @@
+DROP TABLE IF EXISTS Amministratore;
+DROP TABLE IF EXISTS Insegnante;
+DROP TABLE IF EXISTS Utente;
+DROP TABLE IF EXISTS Acquisto;
+DROP TABLE IF EXISTS TipoCorso;
+DROP TABLE IF EXISTS Pagamento;
+DROP TABLE IF EXISTS Corso;
+DROP TABLE IF EXISTS Carrello;
+DROP TABLE IF EXISTS Recensione;
+
+CREATE TABLE Amministratore(
+    ID_Amministratore VARCHAR(8) PRIMARY KEY 
+);
+
+CREATE TABLE Insegnante(
+    ID_Insegnante VARCHAR(64) PRIMARY KEY,
+    Nome VARCHAR(64) NOT NULL,
+    Cognome VARCHAR(64) NOT NULL,
+    DataNascita DateTime NOT NULL
+);
+
+CREATE TABLE Utente(
+    ID_Utente VARCHAR(255) PRIMARY KEY,
+    Nome VARCHAR(64) NOT NULL,
+    Cognome VARCHAR(64) NOT NULL,
+    DataNascita DateTime NOT NULL
+);
+
+CREATE TABLE TipoCorso(
+    ID_TipoCorso VARCHAR(16) PRIMARY KEY,
+    Nome VARCHAR(255) NOT NULL,
+    ParolaChiave VARCHAR(255) 
+);
+
+
+CREATE TABLE Corso(
+    ID_Corso VARCHAR(64) PRIMARY KEY,
+    NomeCorso VARCHAR(64) NOT NULL,
+    Costo DECIMAL(10,2) DEFAULT 0,
+    Durata INT(8) NOT NULL,
+    ID_TipoCorso VARCHAR(16),
+    ID_Insegnante VARCHAR(64),
+    FOREIGN KEY (ID_Insegnante) REFERENCES Insegnante(ID_Insegnante),
+    FOREIGN KEY (ID_TipoCorso) REFERENCES TipoCorso(ID_TipoCorso) 
+);
+
+
+
+CREATE TABLE Acquisto(
+    ID_Acquisto VARCHAR(255) PRIMARY KEY,
+    ID_Corso VARCHAR(64),
+    FOREIGN KEY (ID_Corso) REFERENCES Corso(ID_Corso)
+);
+
+
+CREATE TABLE Carrello(
+    ID_Carrello VARCHAR(255),
+    Importo DECIMAL(10,2) DEFAULT 0,
+    Extra DECIMAL(10,2) DEFAULT 0,
+    DataAcquisto DATETIME NOT NULL,
+    ID_Acquisto VARCHAR(255),
+    ID_Utente VARCHAR(255),
+    PRIMARY KEY (ID_Carrello, DataAcquisto, ID_Acquisto),
+    FOREIGN KEY (ID_Acquisto) REFERENCES Acquisto(ID_Acquisto),
+    FOREIGN KEY (ID_Utente) REFERENCES Utente(ID_Utente)
+);
+
+CREATE TABLE Pagamento(
+    ID_Pagamento VARCHAR(255) PRIMARY KEY,
+    Importo DECIMAL(10,2) DEFAULT 0,
+    DataPagamento DATETIME NOT NULL,
+    ID_Amministratore VARCHAR(8),
+    ID_Carrello VARCHAR(255),
+    ID_Insegnante VARCHAR(64),
+    FOREIGN KEY (ID_Amministratore) REFERENCES Amministratore(ID_Amministratore),
+    FOREIGN KEY (ID_Carrello) REFERENCES Carrello(ID_Carrello),
+    FOREIGN KEY (ID_Insegnante) REFERENCES Insegnante(ID_Insegnante)
+);
+
+CREATE TABLE Recensione(
+    ID_Recensione VARCHAR(255) PRIMARY KEY,
+    VotoRecensione INT NOT NULL,
+    DataRecensione ,
+    ID_Corso VARCHAR(255),
+    ID_Carrello VARCHAR(255),
+    FOREIGN KEY (ID_Corso) REFERENCES Corso(ID_Corso),
+    FOREIGN KEY (ID_Carrello) REFERENCES Carrello(ID_Carrello)
+);

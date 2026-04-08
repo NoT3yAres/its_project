@@ -1,0 +1,2 @@
+SELECT NomeCorso, MAX(Costo)
+FROM Corso;

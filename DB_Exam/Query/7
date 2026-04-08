@@ -1,0 +1,6 @@
+SELECT COUNT(Acquisto.ID_Acquisto)
+FROM Acquisto, Carrello, Utente
+WHERE   (Acquisto.ID_Acquisto = Carrello.ID_Acquisto) AND
+        (Utente.ID_Utente = Carrello.ID_Utente) AND
+        (Utente.Nome = 'Mario') AND (Utente.Cognome = 'Rossi') AND
+        (Carrello.DataAcquisto > '2022-01-31') AND (Carrello.DataAcquisto < '2022-03-01');

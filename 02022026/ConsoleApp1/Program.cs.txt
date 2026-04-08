@@ -1,0 +1,25 @@
+﻿using System.Formats.Asn1;
+
+class mediaVoti
+{
+    static void Main(string[] args)
+    {
+        int lat1, lat2;
+        Console.WriteLine("Inserisci il lat1");
+        lat1 = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Inserisci il lat2");
+        lat2 = Convert.ToInt32(Console.ReadLine());
+        Console.Write($"Area = {funcArea(lat1, lat2)}\nPerimetro = {funcPerimetro(lat1, lat2)}");
+    }
+    static int funcArea(int lat1, int lat2)
+    {
+        return (lat1 * lat2);
+    }
+
+    static int funcPerimetro(int lat1, int lat2)
+    {
+        return ((lat1 * 2) + (lat2 * 2));
+    }
+
+
+}

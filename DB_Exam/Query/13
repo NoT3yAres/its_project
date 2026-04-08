@@ -1,0 +1,2 @@
+SELECT SUM(Importo * 0.9) AS Pagamento_Meno_Fee, SUM(Importo * 0.1) AS Fee_Trattenute
+FROM Pagamento;

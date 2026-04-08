@@ -1,0 +1,5 @@
+SELECT SUM(Pagamento.Importo)
+FROM Pagamento, Insegnante
+WHERE   (Insegnante.ID_Insegnante = Pagamento.ID_Insegnante ) AND 
+        (Insegnante.Nome = 'Giuseppe') AND (Insegnante.Cognome = 'Gialli') AND
+        (Pagamento.DataPagamento < '2026-12-31');

@@ -1,0 +1,9 @@
+INSERT INTO Corso (ID_Corso, NomeCorso, Durata, ID_Insegnante, Costo, ID_TipoCorso)
+VALUES  ('1', 'Cucito', 100, '1', 5, '1'),
+        ('2', 'C++', 50, '2', 10, '2'),
+        ('3', 'Giardinaggio', 100, '1', 10, '3'),
+        ('4', 'Pattinaggio', 200, '3', 10, '4'),
+        ('5', 'Corsi online', 500, '1', 50, '4'),
+        ('6', 'Base di dati', 1000, '2', 150, '2'),
+        ('7', 'Sopravvivenza', 500, '1', 20, '4'),
+        ('8', 'Buone maniere', 200, '3', 10, '4');

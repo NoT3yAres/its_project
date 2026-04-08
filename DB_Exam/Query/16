@@ -1,0 +1,6 @@
+SELECT COUNT(TipoCorso.ID_TipoCorso)
+FROM TipoCorso, Corso, Insegnante
+WHERE   (TipoCorso.ID_TipoCorso = Corso.ID_TipoCorso) AND
+        (Insegnante.ID_Insegnante = Corso.ID_Insegnante) AND
+        (TipoCorso.Nome = 'Tutorial') AND
+        (Insegnante.Nome = 'Giuseppe') AND (Insegnante.Cognome = 'Gialli');

@@ -1,0 +1,4 @@
+SELECT MAX(Carrello.Extra)
+FROM Corso, Acquisto, Carrello
+WHERE   (Corso.ID_Corso = Acquisto.ID_Corso) AND
+        (Carrello.ID_Acquisto = Acquisto.ID_Acquisto)

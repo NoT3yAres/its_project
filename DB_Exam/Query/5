@@ -1,0 +1,2 @@
+SELECT NomeCorso, MIN(Costo)
+FROM Corso;

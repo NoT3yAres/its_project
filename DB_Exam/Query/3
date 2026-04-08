@@ -1,0 +1,6 @@
+SELECT Acquisto.ID_Acquisto, Corso.Durata
+FROM Corso, Acquisto
+WHERE Acquisto.ID_Corso = Corso.ID_Corso
+GROUP BY Corso.ID_Corso
+ORDER BY COUNT (Acquisto.ID_Acquisto) DESC
+LIMIT 1;

@@ -1,0 +1,5 @@
+SELECT NomeCorso, AVG(Carrello.Extra)
+FROM Corso, Acquisto, Carrello
+WHERE   (Corso.ID_Corso = Acquisto.ID_Corso) AND
+        (Carrello.ID_Acquisto = Acquisto.ID_Acquisto)
+GROUP BY (Corso.ID_Corso);

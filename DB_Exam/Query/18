@@ -1,0 +1,4 @@
+SELECT Corso.NomeCorso
+FROM TipoCorso, Corso
+WHERE   (TipoCorso.ID_TipoCorso = Corso.ID_TipoCorso) AND
+        (TipoCorso.ParolaChiave LIKE '%Attrezzi');

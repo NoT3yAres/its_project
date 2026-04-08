@@ -1,0 +1,2 @@
+SELECT AVG(Costo) as Costo_medio
+FROM Corso;

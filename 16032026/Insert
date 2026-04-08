@@ -1,0 +1,8 @@
+INSERT INTO Dipartimenti (DipartimentoID, Nome) VALUES (1, 'Informatica'), (2, 'Matematica'), (3, 'Fisica'); -- Popolamento della tabella Docenti 
+INSERT INTO Docenti (DocenteID, Nome, Cognome, DipartimentoID) VALUES (1, 'Alessandro', 'Neri', 1), (2, 'Maria', 'Rossi', 2), (3, 'Giovanni', 'Verdi', 3); 
+-- Popolamento della tabella Corsi 
+INSERT INTO Corsi (CorsoID, NomeCorso, Descrizione, DocenteID) VALUES (1, 'Programmazione', 'Corso di base di programmazione', 1), (2, 'Algebra', 'Corso di algebra lineare', 2), (3, 'Meccanica', 'Corso di meccanica classica', 3); 
+-- Popolamento della tabella Studenti 
+INSERT INTO Studenti (StudenteID, Nome, Cognome, DataDiNascita) VALUES (1, 'Mario', 'Rossi', '1999-05-15'), (2, 'Luca', 'Bianchi', '2000-08-22'), (3, 'Giulia', 'Verdi', '1998-11-30'); 
+-- Popolamento della tabella Iscrizioni 
+INSERT INTO Iscrizioni (IscrizioneID, StudenteID, CorsoID, DataIscrizione) VALUES (1, 1, 1, '2023-01-15'), (2, 2, 2, '2023-01-16'), (3, 3, 3, '2023-02-10'), (4, 1, 2, '2023-02-11'), (5, 2, 3, '2023-03-12');

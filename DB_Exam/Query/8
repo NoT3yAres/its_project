@@ -1,0 +1,7 @@
+SELECT COUNT (Acquisto.ID_Acquisto)
+FROM Acquisto, Corso, Insegnante, Carrello
+WHERE   (Acquisto.ID_Corso = Corso.ID_Corso) AND
+        (Corso.ID_Insegnante = Insegnante.ID_Insegnante) AND
+        (Carrello.ID_Acquisto = Acquisto.ID_Acquisto) AND
+        (Insegnante.Nome = 'Michele') AND (Insegnante.Cognome = 'Gialli') AND
+        (Carrello.DataAcquisto > '2022-02-31') AND (Carrello.DataAcquisto < '2022-04-01');

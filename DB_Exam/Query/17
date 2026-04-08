@@ -1,0 +1,3 @@
+SELECT Insegnante.Nome
+FROM Insegnante
+WHERE Insegnante.Cognome = 'Gialli';

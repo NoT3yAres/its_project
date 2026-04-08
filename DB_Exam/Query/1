@@ -1,0 +1,2 @@
+SELECT AVG(Durata) as Durata_media
+FROM Corso;

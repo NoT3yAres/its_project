@@ -1,0 +1,5 @@
+INSERT INTO TipoCorso
+VALUES  ('1','Domestici','casa, bambini, pulizia'),
+        ('2','Informatica','tecnologia, sql, programmazione, matematica'),
+        ('3','fai da te','attrezzi, risultati, casa'),
+        ('4','tutorial','tecnologia, casa, attrezzi');
