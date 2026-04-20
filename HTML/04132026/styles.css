@@ -1,0 +1,62 @@
+body{
+    background-color: black;
+}
+
+@font-face {
+    font-family: OdinText;
+    src: url(Norsebold.otf);
+}
+
+#main_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 99vh;
+    width: max(99%);
+    margin: 0;
+}
+
+#left_container{
+    width: 33%;
+    height: 100%;
+    background-color:darkblue;
+    background-image: url(background-foglie.avif);
+}
+
+#right_container {
+    width: 67%;
+    height: 100%;
+    background-color: wheat;
+    
+}
+
+#odin_logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.632);
+    margin-top: 15vh;
+}
+#img_logo{
+    height: 90%;
+    aspect-ratio: 1 / 1;
+}
+
+#odin_text{
+    color: white;
+    font-family: OdinText;
+    font-size: 7.3em;
+}
+
+p{
+    font-family: monospace;
+}
+
+#testo_sopra_form{
+    margin: 2vw;
+    color: black;
+    font-size: 1.75em;
+}
+

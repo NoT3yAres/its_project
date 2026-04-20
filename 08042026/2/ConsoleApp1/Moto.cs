@@ -2,10 +2,10 @@ using System.Reflection;
 
 namespace ClasseVeicolo
 {
-    public class Auto : Veicolo
+    public class Moto : Veicolo
     {
-        public int NumeroPorte;
-        public Auto(string marca, string modello, int anno, int numeroPorte) : base(marca, modello, anno)
+
+        public Moto(string marca, string modello, int anno, int numeroPorte) : base(marca, modello, anno)
         {
             NumeroPorte = numeroPorte;
         }
